@@ -32,7 +32,7 @@ This project is a web application that allows the user to play hangman using din
 ---
 ### Test Suite/Specification
 
-> See also [dino.test.js](https://github.com/chonnessey/dino-ipsum/tree/main/__tests__) for Jest Test Suite which includes 14 passing tests. View Test Results from Project Directory by Running `yarn run test` or if you prefer npm `npm run test`
+> See also [dino.test.js](https://github.com/chonnessey/dino-ipsum/tree/main/__tests__) for Jest Test Suite which includes 2 passing tests. View Test Results from Project Directory by Running `yarn run test` or if you prefer npm `npm run test`
 
 ---
 ## Contact info
