@@ -1,13 +1,27 @@
 // Alaskacephale
-export default function getDisplayString(){
-  const dino = "Alaskacephale";
-  const letterArray = dino.split("");
-  let userGuess = "a";
-  let displayString = "";
-  letterArray.forEach(function(letter) {
-    displayString += letter;
-  });
-  return displayString;
+export default class DinoGame {
+  constructor (dino) {
+    this.dino = dino;
+    this.userGuess="";
+  }
+
+  getDisplayString() {
+    const letterArray = this.dino.toLowerCase().split("");
+    let displayString = "";
+    for(let i=0; i<letterArray.length; i++){
+      if((this.userGuess).includes(letterArray[i])){
+        displayString += letterArray[i];
+      }
+      else {
+        displayString += "_";
+      }
+    };
+    return displayString;
+  };
+  processUserGuess(guess){
+    this.userGuess += guess;
+    return this.userGuess;
+  }
 }
 
 
