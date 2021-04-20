@@ -5,9 +5,19 @@
 </head>
 <body>
   <section class="main">
-    <button class="btn btn-success btn-lg" id="get-dino">Get A Dino!</button>
-    <div id="display-string">
+    <div class="container">
+      <button class="btn btn-success btn-lg" id="get-dino">Get A Dino!</button>
+      <div>
+        <p id="display-string"></p>
+      </div>
+      <form id="input">
+        <div class="form-group">
+          <label for="letter">Input a letter</label>
+          <input id="letter" type="text" class="form-control">
+        </div>
+        <button class="btn btn-primary btn-small" type="submit" id="get-letter">submit..if you dare</button>
 
+      </form>
     </div>
   </section>
 </body>

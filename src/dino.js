@@ -6,14 +6,14 @@ export default class DinoGame {
   }
 
   getDisplayString() {
-    const letterArray = this.dino.toLowerCase().split("");
+    const letterArray = this.dino[0].toLowerCase().split("");
     let displayString = "";
     for(let i=0; i<letterArray.length; i++){
       if((this.userGuess).includes(letterArray[i])){
-        displayString += letterArray[i];
+        displayString += ` ${letterArray[i]}`;
       }
       else {
-        displayString += "_";
+        displayString += " _";
       }
     };
     return displayString;
