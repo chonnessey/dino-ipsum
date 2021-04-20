@@ -22,6 +22,7 @@ $(document).ready(function() {
 
       $('#input').submit(function(event) {
         event.preventDefault();
+        
         const letter = $('#letter').val()
         if (letter.length === 1) {
           dinoGame.processUserGuess(letter);
@@ -34,6 +35,7 @@ $(document).ready(function() {
           }
           $('#letter').val("");
           $('#warning').hide();
+          $('#wrong-guesses').show();
           $('#wrong-guesses').text(dinoGame.wrongGuess.split("").join(" "));
         } else {
           $('#warning').show();
@@ -42,13 +44,10 @@ $(document).ready(function() {
         if(dinoGame.wrongGuess.length>2){
           $("#input").hide();
           $("#warning").hide();
+          $('#display-string').hide();
           $("#meteor").show();
         }
       })
     })
   })
 })
-
-
-
-// my discord just died for some reason
