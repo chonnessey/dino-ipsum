@@ -18,8 +18,15 @@ $(document).ready(function() {
       $('#input').submit(function(event) {
         event.preventDefault();
         const letter = $('#letter').val()
-        dinoGame.processUserGuess(letter);
-        $('#display-string').text(`${dinoGame.getDisplayString()}`)
+        if (letter.length === 1) {
+          dinoGame.processUserGuess(letter);
+          $('#display-string').text(`${dinoGame.getDisplayString()}`)
+          $('#letter').val("");
+          $('#warning').hide();
+        } else {
+          $('#warning').show();
+          $('#letter').val("");
+        }
       })
     })
   })
