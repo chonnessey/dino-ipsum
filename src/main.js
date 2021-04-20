@@ -15,6 +15,11 @@ $(document).ready(function() {
       dinoGame = new DinoGame(body[0]);
       $('#display-string').text(`${dinoGame.getDisplayString()}`)
       $('#input').show();
+      $("#warning").hide();
+      $("#wrong-guesses").hide();
+      $("#t-rex").hide();
+      $("#meteor").hide();
+
       $('#input').submit(function(event) {
         event.preventDefault();
         const letter = $('#letter').val()
@@ -29,13 +34,21 @@ $(document).ready(function() {
           }
           $('#letter').val("");
           $('#warning').hide();
-          $('#wrong-guesses').text(dinoGame.wrongGuess);
+          $('#wrong-guesses').text(dinoGame.wrongGuess.split("").join(" "));
         } else {
           $('#warning').show();
           $('#letter').val("");
+        }
+        if(dinoGame.wrongGuess.length>2){
+          $("#input").hide();
+          $("#warning").hide();
+          $("#meteor").show();
         }
       })
     })
   })
 })
 
+
+
+// my discord just died for some reason

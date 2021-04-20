@@ -25,17 +25,9 @@ export default class DinoGame {
       this.userGuess += guess;
       return this.userGuess;
     } else {
-      this.wrongGuess += `${guess} `;
+      if (!this.wrongGuess.includes(guess)){
+        this.wrongGuess += guess;}
       return this.wrongGuess;
     }
   }
 }
-
-
-
-
-
-// const array = [0,1,2,3,4,5];
-// array.forEach(function(number) { 
-//   console.log(number * 2);
-// });

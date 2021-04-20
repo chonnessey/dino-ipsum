@@ -37,9 +37,9 @@ This project is a web application that allows the user to play hangman using din
 ---
 ## Contact info
 
-Adrian Camacho: <adriancamacho18@gmail.com>
-Thomas Russell: <t.p.russell19@gmail.com>
-Tori West: <victoria_west@ymail.com>
+* Adrian Camacho: <adriancamacho18@gmail.com>
+* Thomas Russell: <t.p.russell19@gmail.com>
+* Tori West: <victoria_west@ymail.com>
 
 ### License is GPLv3 and I make no claim to copyright. 
 <br />
