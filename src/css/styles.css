@@ -4,4 +4,14 @@
 
 #warning {
   display: none;
+  color: red;
+  font-weight: bolder;
+}
+
+#wrong-guesses {
+  color: red;
+}
+
+#t-rex {
+  display: none;
 }

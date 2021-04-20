@@ -3,14 +3,15 @@ export default class DinoGame {
   constructor (dino) {
     this.dino = dino;
     this.userGuess="";
+    this.wrongGuess="";
+    this.letterArray= this.dino[0].toLowerCase().split("");
   }
 
   getDisplayString() {
-    const letterArray = this.dino[0].toLowerCase().split("");
     let displayString = "";
-    for(let i=0; i<letterArray.length; i++){
-      if((this.userGuess).includes(letterArray[i])){
-        displayString += ` ${letterArray[i]}`;
+    for(let i=0; i<this.letterArray.length; i++){
+      if((this.userGuess).includes(this.letterArray[i])){
+        displayString += ` ${this.letterArray[i]}`;
       }
       else {
         displayString += " _";
@@ -18,12 +19,17 @@ export default class DinoGame {
     };
     return displayString;
   };
+
   processUserGuess(guess){
-    this.userGuess += guess;
-    return this.userGuess;
+    if(this.letterArray.includes(guess)){
+      this.userGuess += guess;
+      return this.userGuess;
+    } else {
+      this.wrongGuess += `${guess} `;
+      return this.wrongGuess;
+    }
   }
 }
-
 
 
 

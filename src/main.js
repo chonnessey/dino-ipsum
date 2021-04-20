@@ -20,9 +20,16 @@ $(document).ready(function() {
         const letter = $('#letter').val()
         if (letter.length === 1) {
           dinoGame.processUserGuess(letter);
-          $('#display-string').text(`${dinoGame.getDisplayString()}`)
+          let displayString = dinoGame.getDisplayString();
+          $('#display-string').text(`${displayString}`)
+          if(!displayString.includes("_")) {
+            $("#input").hide();
+            $("#warning").hide();
+            $("#t-rex").show();
+          }
           $('#letter').val("");
           $('#warning').hide();
+          $('#wrong-guesses').text(dinoGame.wrongGuess);
         } else {
           $('#warning').show();
           $('#letter').val("");
@@ -31,6 +38,4 @@ $(document).ready(function() {
     })
   })
 })
-
-console.log(DinoGame);
 
